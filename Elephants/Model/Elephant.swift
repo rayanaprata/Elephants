@@ -5,8 +5,6 @@
 //  Created by Rayana Prata Neves on 18/10/21.
 //
 
-import Foundation
-
 /*
     {
          "_id": "5cf1d0dbcd5e98f2540c4d1c",
@@ -50,27 +48,27 @@ struct Elephant: Codable {
     var image           : String?
     var note            : String?
     
-    init(
-        _id         : String? = nil,
-        name        : String? = nil,
-        species     : String? = nil,
-        sex         : String? = nil,
-        dob         : String? = nil,
-        dod         : String? = nil,
-        wikilink    : String? = nil,
-        image       : String? = nil,
-        note        : String? = nil
-    ) {
-        self._id        = _id
-        self.name       = name
-        self.species    = species
-        self.sex        = sex
-        self.dob        = dob
-        self.dod        = dod
-        self.wikilink   = wikilink
-        self.image      = image
-        self.note       = note
-    }
+//    init(
+//        _id         : String? = nil,
+//        name        : String? = nil,
+//        species     : String? = nil,
+//        sex         : String? = nil,
+//        dob         : String? = nil,
+//        dod         : String? = nil,
+//        wikilink    : String? = nil,
+//        image       : String? = nil,
+//        note        : String? = nil
+//    ) {
+//        self._id        = _id
+//        self.name       = name
+//        self.species    = species
+//        self.sex        = sex
+//        self.dob        = dob
+//        self.dod        = dod
+//        self.wikilink   = wikilink
+//        self.image      = image
+//        self.note       = note
+//    }
     
     // quando eu crio esse enum eu coloco apenas os valores que eu quero receber da API
     enum CodingKeys: String, CodingKey {
