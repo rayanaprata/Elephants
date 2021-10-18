@@ -8,22 +8,18 @@
 
 /* Begin PBXBuildFile section */
 		882264D7271DA34700025E27 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 882264D6271DA34700025E27 /* AppDelegate.swift */; };
-		882264D9271DA34700025E27 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 882264D8271DA34700025E27 /* SceneDelegate.swift */; };
 		882264DB271DA34700025E27 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 882264DA271DA34700025E27 /* ViewController.swift */; };
-		882264DE271DA34700025E27 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 882264DC271DA34700025E27 /* Main.storyboard */; };
 		882264E0271DA34800025E27 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 882264DF271DA34800025E27 /* Assets.xcassets */; };
-		882264E3271DA34800025E27 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 882264E1271DA34800025E27 /* LaunchScreen.storyboard */; };
+		882264EB271DAF4900025E27 /* Elephant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 882264EA271DAF4900025E27 /* Elephant.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		882264D3271DA34700025E27 /* Elephants.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Elephants.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		882264D6271DA34700025E27 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		882264D8271DA34700025E27 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		882264DA271DA34700025E27 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		882264DD271DA34700025E27 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		882264DF271DA34800025E27 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		882264E2271DA34800025E27 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		882264E4271DA34800025E27 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		882264EA271DAF4900025E27 /* Elephant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Elephant.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -41,6 +37,8 @@
 			isa = PBXGroup;
 			children = (
 				882264D5271DA34700025E27 /* Elephants */,
+				882264EC271DB5EA00025E27 /* Model */,
+				882264ED271DB60300025E27 /* Controller */,
 				882264D4271DA34700025E27 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -57,14 +55,26 @@
 			isa = PBXGroup;
 			children = (
 				882264D6271DA34700025E27 /* AppDelegate.swift */,
-				882264D8271DA34700025E27 /* SceneDelegate.swift */,
-				882264DA271DA34700025E27 /* ViewController.swift */,
-				882264DC271DA34700025E27 /* Main.storyboard */,
 				882264DF271DA34800025E27 /* Assets.xcassets */,
-				882264E1271DA34800025E27 /* LaunchScreen.storyboard */,
 				882264E4271DA34800025E27 /* Info.plist */,
 			);
 			path = Elephants;
+			sourceTree = "<group>";
+		};
+		882264EC271DB5EA00025E27 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				882264EA271DAF4900025E27 /* Elephant.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		882264ED271DB60300025E27 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				882264DA271DA34700025E27 /* ViewController.swift */,
+			);
+			path = Controller;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -125,9 +135,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				882264E3271DA34800025E27 /* LaunchScreen.storyboard in Resources */,
 				882264E0271DA34800025E27 /* Assets.xcassets in Resources */,
-				882264DE271DA34700025E27 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -140,30 +148,11 @@
 			files = (
 				882264DB271DA34700025E27 /* ViewController.swift in Sources */,
 				882264D7271DA34700025E27 /* AppDelegate.swift in Sources */,
-				882264D9271DA34700025E27 /* SceneDelegate.swift in Sources */,
+				882264EB271DAF4900025E27 /* Elephant.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXVariantGroup section */
-		882264DC271DA34700025E27 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				882264DD271DA34700025E27 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		882264E1271DA34800025E27 /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				882264E2271DA34800025E27 /* Base */,
-			);
-			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		882264E5271DA34800025E27 /* Debug */ = {
@@ -292,10 +281,9 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Elephants/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -305,7 +293,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -319,10 +307,9 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Elephants/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -332,7 +319,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
