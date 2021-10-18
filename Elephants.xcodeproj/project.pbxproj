@@ -37,8 +37,6 @@
 			isa = PBXGroup;
 			children = (
 				882264D5271DA34700025E27 /* Elephants */,
-				882264EC271DB5EA00025E27 /* Model */,
-				882264ED271DB60300025E27 /* Controller */,
 				882264D4271DA34700025E27 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -54,6 +52,8 @@
 		882264D5271DA34700025E27 /* Elephants */ = {
 			isa = PBXGroup;
 			children = (
+				882264EC271DB5EA00025E27 /* Model */,
+				882264ED271DB60300025E27 /* Controller */,
 				882264D6271DA34700025E27 /* AppDelegate.swift */,
 				882264DF271DA34800025E27 /* Assets.xcassets */,
 				882264E4271DA34800025E27 /* Info.plist */,
