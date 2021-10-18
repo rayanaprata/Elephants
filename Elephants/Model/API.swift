@@ -25,7 +25,12 @@ struct API {
     
     /// Returns the URL String to Endpoint Sex Elephants
     func setSexElephantURL() -> String {
-        return "\(baseURL)/\(EndPoints.elephants)/\(EndPoints.sex)/"  //  need add sex
+        return "\(baseURL)/\(EndPoints.elephants)/\(EndPoints.sex)/"  //  need add sex to url /elephants/sex/{SEX}
+    }
+    
+    /// Returns the URL String to Endpoint Name Elephant
+    func setNameElephantURL() -> String {
+        return "\(baseURL)/\(EndPoints.elephants)/\(EndPoints.name)/"  //  need add sex to url /elephants/name/{NAME}
     }
     
 //    func getElephants(urlString: String, method: HTTPMethod, response: @escaping ([Elephant]) -> Void, errorReturned: @escaping (String) -> Void) {
@@ -33,6 +38,9 @@ struct API {
 //
 //        response([elephant])
 //    }
+    
+    
+    // :::::::::::: fazendo sem closure ::::::::::::
     
     /// Returns an array of Elephant , but, If returns a empty array []
     func getElephants(urlString: String, method: HTTPMethod) -> [Elephant] {
@@ -60,6 +68,11 @@ struct API {
             
             var statusCode: Int = 0
             if let response = urlResponse as? HTTPURLResponse {
+//                outra forma de fazer:
+//                if response.statusCode >= 300 {
+//                    return
+//                }
+                
                 statusCode = response.statusCode
             }
             
@@ -72,16 +85,20 @@ struct API {
                 
                 // decodificar o retorno
                 arrayElephants = try decoder.decode([Elephant].self, from: data)
+                
+//                outra forma de fazer:
+//                arrayElephants = try JSONDecoder().decode([Elephant].self, from: data)
+                
             } catch {
                 // error
+                print("deu erro")
             }
             
         })
         
         task.resume()
         
+        sleep(2)
         return arrayElephants
     }
 }
-
-
