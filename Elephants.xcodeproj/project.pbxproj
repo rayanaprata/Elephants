@@ -15,6 +15,7 @@
 		882264F2271DBE1200025E27 /* EndPoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 882264F1271DBE1200025E27 /* EndPoints.swift */; };
 		882264F4271DC21D00025E27 /* HTTPMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = 882264F3271DC21D00025E27 /* HTTPMethod.swift */; };
 		882264F6271DD87100025E27 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 882264F5271DD87100025E27 /* DetailViewController.swift */; };
+		88ABF007271EF1D6003B2056 /* Sex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88ABF006271EF1D6003B2056 /* Sex.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		882264F1271DBE1200025E27 /* EndPoints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndPoints.swift; sourceTree = "<group>"; };
 		882264F3271DC21D00025E27 /* HTTPMethod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPMethod.swift; sourceTree = "<group>"; };
 		882264F5271DD87100025E27 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		88ABF006271EF1D6003B2056 /* Sex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sex.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,6 +78,7 @@
 				882264EF271DBD1500025E27 /* API.swift */,
 				882264F1271DBE1200025E27 /* EndPoints.swift */,
 				882264F3271DC21D00025E27 /* HTTPMethod.swift */,
+				88ABF006271EF1D6003B2056 /* Sex.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -162,6 +165,7 @@
 				882264F2271DBE1200025E27 /* EndPoints.swift in Sources */,
 				882264F4271DC21D00025E27 /* HTTPMethod.swift in Sources */,
 				882264D7271DA34700025E27 /* AppDelegate.swift in Sources */,
+				88ABF007271EF1D6003B2056 /* Sex.swift in Sources */,
 				882264F0271DBD1500025E27 /* API.swift in Sources */,
 				882264EB271DAF4900025E27 /* Elephant.swift in Sources */,
 				882264F6271DD87100025E27 /* DetailViewController.swift in Sources */,

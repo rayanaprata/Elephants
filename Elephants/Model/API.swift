@@ -23,7 +23,7 @@ struct API {
     }
     
     /// Returns the URL String to Endpoint Sex Elephants
-    func setSexElephantURL(_ sex: String) -> String {
+    func setSexElephantURL(_ sex: Sex) -> String {
         return "\(baseURL)/\(EndPoints.elephants)/\(EndPoints.sex)/\(sex))"  //  need add sex to url /elephants/sex/{SEX}
     }
     
