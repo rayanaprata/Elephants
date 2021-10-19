@@ -9,6 +9,7 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    let api = API()
     var elephants: [Elephant] = []
     var tableViewListElephants = UITableView()
     
@@ -24,11 +25,16 @@ class ViewController: UIViewController {
         self.view.addSubview(self.tableViewListElephants)
         
 //        executando a requisicao:
-        let url = API().setElephantsURL()
-        self.elephants = API().getElephants(urlString: url, method: .GET)
-        
-        tableViewListElephants.reloadData()
-        print("Quantidade de elefantes: ", self.elephants.count)
+        let url = api.setElephantsURL()
+        api.getElephants(urlString: url, method: .GET, response: { elephantsReturned in
+            self.elephants = elephantsReturned
+            DispatchQueue.main.async {
+                print("Quantidade de elefantes: ", self.elephants.count)
+                self.tableViewListElephants.reloadData()
+            }
+        }, errorReturned: { errorMessage in
+            print("\(errorMessage)")
+        })
     }
     
 }
@@ -47,13 +53,11 @@ extension ViewController: UITableViewDataSource {
         cell.detailTextLabel?.adjustsFontSizeToFitWidth = false
         cell.detailTextLabel?.numberOfLines = 0
         
-        
         if let image = self.elephants[indexPath.row].image {
             let url = URL(string: image)
             let data = try? Data(contentsOf: url!)
             cell.imageView?.image = UIImage(data: data!)
         }
-        
         return cell
     }
     

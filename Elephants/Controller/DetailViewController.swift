@@ -16,12 +16,6 @@ class DetailViewController: UIViewController {
         super.viewDidLoad()
         
         print("Elefante tocado: \(elephant.name)")
-        
-//        setupUI()
     }
     
-//    func setupUI() {
-//        print("Elefante tocado: \(elephant.name)")
-//    }
-//
 }
