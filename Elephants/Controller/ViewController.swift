@@ -15,7 +15,7 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-//        pra popular a tabela vamos precisar do:
+//        pra popular a tabela vamos precisar de:
 //        image, name, note -> lembrar de dar um reloadData na tabela pra ele executar e popular certinho
         
         self.tableViewListElephants.frame = self.view.bounds

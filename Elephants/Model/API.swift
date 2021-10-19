@@ -10,7 +10,6 @@ import Foundation
 struct API {
     
     // https://elephant-api.herokuapp.com/elephants
-    
     let baseURL = "https://elephant-api.herokuapp.com"
     
     /// Returns the URL String to Endpoint Elephants
@@ -24,13 +23,13 @@ struct API {
     }
     
     /// Returns the URL String to Endpoint Sex Elephants
-    func setSexElephantURL() -> String {
-        return "\(baseURL)/\(EndPoints.elephants)/\(EndPoints.sex)/"  //  need add sex to url /elephants/sex/{SEX}
+    func setSexElephantURL(_ sex: String) -> String {
+        return "\(baseURL)/\(EndPoints.elephants)/\(EndPoints.sex)/\(sex))"  //  need add sex to url /elephants/sex/{SEX}
     }
     
     /// Returns the URL String to Endpoint Name Elephant
-    func setNameElephantURL() -> String {
-        return "\(baseURL)/\(EndPoints.elephants)/\(EndPoints.name)/"  //  need add sex to url /elephants/name/{NAME}
+    func setNameElephantURL(_ name: String) -> String {
+        return "\(baseURL)/\(EndPoints.elephants)/\(EndPoints.name)/\(name)"  //  need add sex to url /elephants/name/{NAME}
     }
     
 //    func getElephants(urlString: String, method: HTTPMethod, response: @escaping ([Elephant]) -> Void, errorReturned: @escaping (String) -> Void) {
