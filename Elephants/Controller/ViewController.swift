@@ -13,6 +13,8 @@ class ViewController: UIViewController {
     var elephants: [Elephant] = []
     var tableViewListElephants = UITableView()
     
+    var reuseIdentifier = "CelulaElephantTableViewCell"
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -22,6 +24,10 @@ class ViewController: UIViewController {
         self.tableViewListElephants.frame = self.view.bounds
         self.tableViewListElephants.dataSource = self
         self.tableViewListElephants.delegate = self
+        
+        let nib = UINib(nibName: "CelulaElephantTableViewCell", bundle: nil)
+        self.tableViewListElephants.register(nib, forCellReuseIdentifier: reuseIdentifier)
+            
         self.view.addSubview(self.tableViewListElephants)
         
 //        executando a requisicao:
@@ -40,27 +46,32 @@ class ViewController: UIViewController {
 }
 
 extension ViewController: UITableViewDataSource {
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return self.elephants.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        let cell = UITableViewCell(style: .subtitle, reuseIdentifier: "Cell")
-        cell.textLabel?.text = self.elephants[indexPath.row].name
-        cell.detailTextLabel?.text = self.elephants[indexPath.row].note
+        let cell = tableView.dequeueReusableCell(withIdentifier: reuseIdentifier, for: indexPath) as? CelulaElephantTableViewCell
         
-        cell.detailTextLabel?.adjustsFontSizeToFitWidth = false
-        cell.detailTextLabel?.numberOfLines = 0
+        cell?.labelTitle.text = self.elephants[indexPath.row].name
+        cell?.labelDescription.text = self.elephants[indexPath.row].note
+
+        cell?.labelDescription.adjustsFontSizeToFitWidth = false
+        cell?.labelDescription.numberOfLines = 0
         
         if let image = self.elephants[indexPath.row].image {
             let url = URL(string: image)
             let data = try? Data(contentsOf: url!)
-            cell.imageView?.image = UIImage(data: data!)
+            cell?.imageElephant?.image = UIImage(data: data!)
         }
-        return cell
+        return cell!
     }
     
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 140
+    }
     
 }
 
